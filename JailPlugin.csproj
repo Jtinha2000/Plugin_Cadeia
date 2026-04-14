@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B829A7A-5077-40AD-A07D-F51A16212322}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JailPlugin</RootNamespace>
+    <AssemblyName>JailPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>D:\Programming\Libraries\Unturned\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\Programming\Libraries\Unturned\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>D:\Programming\Libraries\Unturned\com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Programming\Libraries\Unturned\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Rocket.API">
+      <HintPath>D:\Programming\Libraries\Unturned\Rocket.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Rocket.Core">
+      <HintPath>D:\Programming\Libraries\Unturned\Rocket.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rocket.Unturned">
+      <HintPath>D:\Programming\Libraries\Unturned\Rocket.Unturned.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.NetTransport">
+      <HintPath>D:\Programming\Libraries\Unturned\SDG.NetTransport.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Programming\Libraries\Unturned\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Programming\Libraries\Unturned\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>D:\Programming\Libraries\Unturned\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\Programming\Libraries\Unturned\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="XPconomy">
+      <HintPath>D:\Users\Administrator\Desktop\XPconomy.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\190Command.cs" />
+    <Compile Include="Commands\JailCommand.cs" />
+    <Compile Include="Commands\JailAdminCommand.cs" />
+    <Compile Include="Commands\JailTimeCommand.cs" />
+    <Compile Include="Commands\ReportsCommand.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Models\CrimeModel.cs" />
+    <Compile Include="Models\DetectPlayerTresspassing.cs" />
+    <Compile Include="Models\Enums\EReportOrigin.cs" />
+    <Compile Include="Models\JailModel.cs" />
+    <Compile Include="Models\JailSession.cs" />
+    <Compile Include="Models\ReportSession.cs" />
+    <Compile Include="Models\Sub-Models\CooldownInfo.cs" />
+    <Compile Include="Models\Sub-Models\SItem.cs" />
+    <Compile Include="Models\Sub-Models\SVector3.cs" />
+    <Compile Include="Models\UiSession.cs" />
+    <Compile Include="Patches\PClothesBackpack.cs" />
+    <Compile Include="Patches\PClothesBackpackW.cs" />
+    <Compile Include="Patches\PClothesGlasses.cs" />
+    <Compile Include="Patches\PClothesGlassesW.cs" />
+    <Compile Include="Patches\PClothesHat.cs" />
+    <Compile Include="Patches\PClothesHatW.cs" />
+    <Compile Include="Patches\PClothesMask.cs" />
+    <Compile Include="Patches\PClothesMaskW.cs" />
+    <Compile Include="Patches\PClothesPants.cs" />
+    <Compile Include="Patches\PClothesPantsW.cs" />
+    <Compile Include="Patches\PClothesShirt.cs" />
+    <Compile Include="Patches\PClothesShirtW.cs" />
+    <Compile Include="Patches\PClothesSwapBackpack.cs" />
+    <Compile Include="Patches\PClothesSwapGlasses.cs" />
+    <Compile Include="Patches\PClothesSwapHat.cs" />
+    <Compile Include="Patches\PClothesSwapMask.cs" />
+    <Compile Include="Patches\PClothesSwapPants.cs" />
+    <Compile Include="Patches\PClothesSwapShirt.cs" />
+    <Compile Include="Patches\PClothesSwapVest.cs" />
+    <Compile Include="Patches\PClothesVest.cs" />
+    <Compile Include="Patches\PClothesVestW.cs" />
+    <Compile Include="Patches\PDamage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
